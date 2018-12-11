@@ -13,9 +13,9 @@ namespace unittest
 		{
 			Assert::AreEqual(incrementer(4), 5);
 		}
-		TEST_METHOD(FailThis)
+		TEST_METHOD(AndThis)
 		{
-			Assert::AreEqual(incrementer(6), 9);
+			Assert::AreEqual(incrementer(6), 7);
 		}
 	};
 }
