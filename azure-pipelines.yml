@@ -10,7 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Debug'
-  GTEST_OUTPUT: 'xml:reports/'
+  GTEST_OUTPUT: 'xml'
 
 steps:
 - task: NuGetToolInstaller@0
@@ -29,3 +29,9 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: 'test_detail.xml'
+    alwaysRun: 'true'
