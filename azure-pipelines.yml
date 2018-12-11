@@ -10,7 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Debug'
-  GTEST_OUTPUT: 'xml'
+  GTEST_OUTPUT: 'xml:./reports/result.xml'
 
 steps:
 - task: NuGetToolInstaller@0
@@ -34,5 +34,10 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
-    testResultsFiles: '**/test-*.xml'
+    testResultsFiles: '**/reports/result.xml'
     alwaysRun: 'true'
+        
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'Junit XML'
+    targetPath: '**/reports/'
