@@ -10,6 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Debug'
+  GTEST_OUTPUT: 'xml:reports/'
 
 steps:
 - task: NuGetToolInstaller@0
