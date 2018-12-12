@@ -1,10 +1,10 @@
 #include "pch.h"
 #include "../myapp/incrementer.cpp"
 
-TEST(TestIncrementer, PassThis) {
+TEST(TestIncrementer, PassThisGoogleTest) {
 	EXPECT_EQ(incrementer(3), 4);
 }
 
-TEST(TestIncrementer, FailThis) {
+TEST(TestIncrementer, FailThisGoogleTest) {
 	EXPECT_EQ(incrementer(20), 4);
 }

@@ -9,11 +9,11 @@ namespace unittest
 	TEST_CLASS(TestIncrementerinUT)
 	{
 	public:
-		TEST_METHOD(PassThis)
+		TEST_METHOD(PassThisUnitTest)
 		{
 			Assert::AreEqual(incrementer(4), 5);
 		}
-		TEST_METHOD(AndThis)
+		TEST_METHOD(AndThisUnitTest)
 		{
 			Assert::AreEqual(incrementer(6), 7);
 		}
