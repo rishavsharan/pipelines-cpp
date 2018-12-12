@@ -37,10 +37,10 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testRunner: JUnit
-    testResultsFiles: '**/reports/result.xml'
+    testResultsFiles: './reports/result.xml'
     alwaysRun: 'true'
         
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'Junit XML'
-    targetPath: '**/reports/'
+    targetPath: './reports/'
